@@ -48,7 +48,7 @@ The first line has an extra "{", dont touch it.
 
 The last line is used to show transitions in the story, the format is as follows:
 
-[[ transition_id | transition_id ]]
+[[ text | transition_id ]]
 All transitions must be on the same line.
 
 ----------------------------------------------------------
