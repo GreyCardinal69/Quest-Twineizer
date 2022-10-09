@@ -62,7 +62,6 @@ namespace Quest_Twine_Izer
                         count += node.Actions.Length;
                     }
                     result.Append( '\n' );
-                    result.Append( '/' );
                     foreach (var item in node.Actions)
                     {
                         result.Append( $"[[{item.ButtonText}|{item.TargetNode}]]" );
@@ -76,7 +75,6 @@ namespace Quest_Twine_Izer
                         count += node.Transitions.Length;
                     }
                     result.Append( '\n' );
-                    result.Append( '/' );
                     foreach (var item in node.Transitions)
                     {
                         result.Append( $"[[{item.TargetNode}|{item.TargetNode}]]" );
@@ -86,8 +84,12 @@ namespace Quest_Twine_Izer
                 if (node.Transitions == null && node.Actions == null)
                 {
                     result.Append( '\n' );
-                    result.Append( '/' );
                     result.Append( $"[[{node.DefaultTransition}|{node.DefaultTransition}]]" );
+
+                    if (node.FailureTransition != 0)
+                    {
+                        result.Append( $"[[{node.FailureTransition}|{node.FailureTransition}]]" );
+                    }
                 }
 
                 result.Append( "</tw-passagedata>" );
