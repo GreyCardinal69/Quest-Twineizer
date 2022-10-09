@@ -72,6 +72,6 @@ I am watching you.
 ```
 
 Are both valid story nodes.
-Not all the json must be written, the above will be exported as valid dialog node, with only ac
+Not all the json must be written, the above will be exported as valid dialog node, with only a character assigned.
 
 
